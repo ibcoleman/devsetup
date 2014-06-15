@@ -1,0 +1,28 @@
+Creating a Docker environment to run under Windows
+
+Uses VirtualBox and Vagrant to pull and run Ubuntu 14.04 LTS (Trusty)
+
+To Use:
+
+Install VirtualBox and Vagrant.
+Do a Git checkout of this repo.
+
+Run `vagrant up`
+Once Vagrant has pulled the ubuntu image and installed run:
+	'vagrant ssh' 
+
+This should get you to a prompt.
+
+Next install Docker on the VM.
+
+    3  sudo apt-get install docker.io
+    4  sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker
+    5  sudo sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+    6  sudo docker run -i -t ubuntu /bin/bash
+
+If step 6 is successful, you're ready to pull your Docker image, etc...
+
+**To Go**
+- Figure out how to either: 
+  a) add the Docker update to the downloaded Ubuntu image after it's downloaded. (in the Vagrantfile?)
+  b) create a VM image with Docker already installed and create a repo. 

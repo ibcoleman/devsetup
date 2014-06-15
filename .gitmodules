@@ -1,0 +1,9 @@
+[submodule "chef/cookbooks/apt"]
+	path = chef/cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "chef/cookbooks/openssh"]
+	path = chef/cookbooks/openssh
+	url = https://github.com/opscode-cookbooks/openssh.git
+[submodule "chef/cookbooks/chef-docker"]
+	path = chef/cookbooks/chef-docker
+	url = https://github.com/bflad/chef-docker.git
